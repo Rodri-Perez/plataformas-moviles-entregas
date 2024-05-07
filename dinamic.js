@@ -1,26 +1,123 @@
-const container = document.querySelector('.container');
-const mas = document.querySelector('.mas');
-const menos = document.querySelector('.menos');
-let i = 1;
+const bootstrap = document.querySelector('.boot');
+const style = document.querySelector('.style');
+const body = document.querySelector('body');
+const divs = document.querySelectorAll('div');
+const h1 = document.querySelectorAll('h1');
+const h4 = document.querySelector('h4');
+const a = document.querySelectorAll('a');
+const section = document.querySelector('section');
 
-mas.addEventListener("click", ()=>{
+bootstrap.addEventListener("click", ()=>{
 
-   const titulo = document.createElement('h1');
+   // body
 
-   titulo.setAttribute('class','title_section');
+   body.removeAttribute("class");
 
-   titulo.innerText = "Prueba 1";
+   // divs
 
-   container.appendChild(titulo);
+   for( let i = 1 ; i < 6 ; i++){
+
+      divs[i].removeAttribute("class");
+      
+
+   }
+
+   // h1
+   
+   for( let i = 0 ; i < 5 ; i++){
+
+      h1[i].removeAttribute("class");
+      
+
+   }
+
+
+   // a
+
+   for( let i = 0 ; i < 4 ; i++){
+
+      a[i].removeAttribute("class");
+      
+
+   }
+
+   // h4
+
+   h4.removeAttribute("class");
+   
+   // section
+
+   section.removeAttribute("class");
+
 
 });
 
-menos.addEventListener("click", ()=>{
+style.addEventListener("click", ()=>{
 
-    i = i++;
 
-    const titulo = document.querySelectorAll('.title_section');
- 
-    titulo[i].remove();
- 
- });
+   // body
+
+   body.removeAttribute("class");
+
+   // divs
+
+   for( let i = 1 ; i < 6 ; i++){
+
+      divs[i].removeAttribute("class");
+      
+         if( i = 1){
+
+            divs[i].classList.add("container");
+
+         }
+         else{
+
+            divs[i].classList.add("list");
+
+         }
+
+   }
+
+   // h1
+   
+   
+   for( let i = 0 ; i < 5 ; i++){
+
+      h1[i].removeAttribute("class");
+
+         if( i == 0){
+
+            h1[i].classList.add("title_section");
+
+         }
+
+         else{
+
+            h1[i].classList.add("trabajo");
+
+         }
+      
+      
+
+   }
+
+
+   // a
+
+   for( let i = 0 ; i < 4 ; i++){
+
+      a[i].removeAttribute("class");
+      a[i].classList.add("enlace");
+
+   }
+
+   // h4
+
+   h4.removeAttribute("class");
+   h4.classList.add("subtitle_section");
+   
+   // section
+
+   section.removeAttribute("class");
+
+});
