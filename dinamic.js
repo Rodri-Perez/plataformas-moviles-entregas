@@ -3,10 +3,12 @@ const style = document.querySelector('.style');
 
 bootsrap.addEventListener("click", ()=>{
 
-               redirect(indice.html);
+  location.href("https://rodri-perez.github.io/plataformas-moviles-entregas/indice.html");
+               
 });
 
 style.addEventListener("click", ()=>{
 
-               redirect(index.html);
+  location.href("https://rodri-perez.github.io/plataformas-moviles-entregas/index.html");
+        
 });
