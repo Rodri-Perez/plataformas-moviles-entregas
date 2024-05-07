@@ -3,7 +3,7 @@ const style = document.querySelector('.style');
 
 bootsrap.addEventListener("click", ()=>{
 
-               redirect(index.html);
+               redirect(indice.html);
 });
 
 style.addEventListener("click", ()=>{
