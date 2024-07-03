@@ -5,24 +5,29 @@ const lista_productos = document.querySelector('#lista-productos');
          * esta función se va a llamar cuando el usuario envía el formulario con el nombre del producto para agregar.
          */
 
-function ordenarPorNombre(listaDeProductos) {
-    return listaDeProductos.sort(function (a,b){
-            if (a.value < b.value) {
-              return -1;
-            }
-            else if (a.value > b.value) {
-              return 1;
-            }
-            return 0;
-          })
-          
-    }
+function ordenarAlfabeticamente(listaDeProductos) {
+   
+    const nodeList = document.querySelectorAll('li')
+    const list = Array.from(nodeList)
+    list.sort(function (a,b){
+        if(a.innerText.toLowerCase() < b.innerText.toLowerCase()){
+          return -1;
+        }
+    
+    else if (a.innerText.toLowerCase() > b.innerText.toLowerCase());{
+      return 1;
+      }
+      
+      return 0 ;
+    })
+    console.log(list)
+}   
+    
 function agregarProducto(nombreProducto) {
 
     const li = document.createElement("li");
     li.innerText = nombreProducto;
     lista_productos.appendChild(li);
-    console.log("ordenarPorNombre()", ordenarPorNombre(lista_productos));
 
 }
 
