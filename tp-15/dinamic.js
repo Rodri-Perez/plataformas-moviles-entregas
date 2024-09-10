@@ -21,6 +21,7 @@ async function obteneReceta(details, id) {
   const respuesta = await fetch(details + id);
   const info = await respuesta.json();
   return info.meals;
+  
 }
 
 /* Esta funcion crea los elementos para poder mostrar las recetas */
