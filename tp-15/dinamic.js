@@ -20,7 +20,6 @@ async function obtenerTodo(url) {
 async function obteneReceta(details, id) {
   const respuesta = await fetch(details + id);
   const info = await respuesta.json();
-  p;
   return info.meals;
 }
 
